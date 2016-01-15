@@ -125,7 +125,7 @@ function autosub_is_user_an_exception($user_id) {
 # Return array of all members exempt from inversion rule.
 function autosub_get_exceptions() {
  # Add user IDs here for every exception to the autosubscribe.
- return array(3);
+ return array(-1);
 }
 
 function invert_is_user_subscribed_to_topic($is_subscribed, $user_id) {
