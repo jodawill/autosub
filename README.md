@@ -4,6 +4,9 @@ A WordPress plugin to automatically subscribe users to every BBPress topic and f
 ## Method
 By default, BBPress stores subscriptions by adding every topic ID to a string in the WordPress database. If we were to stick with this method for automatically subscribing users to every topic, we would take a major performance hit as the forum grows larger. AutoSub avoids this problem by inverting the logic, storing only the topics a user is unsubscribed from.
 
+## Mass Emails
+**IMPORTANT:** Be aware that this plugin will dramatically increase the number of emails your forum sends. If you're using a regular SMTP server, like Gmail, this will most likely cause you to hit your daily sending limit. Instead, you should either use your own Postfix server or a professional email service such as Amazon SES.
+
 ## Deactivation
 AutoSub creates a backup of every user's subscriptions upon activation. When the plugin is deactivated, it restores the subscriptions they had when the plugin was activated. For this reason, users will have to manually subscribe to their current topics if you deactivate the plugin.
 
