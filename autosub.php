@@ -136,7 +136,7 @@ function invert_is_user_subscribed_to_topic($is_subscribed, $user_id) {
  }
 } add_filter('bbp_is_user_subscribed_to_topic', 'invert_is_user_subscribed_to_topic', 10, 2);
 
-function invert_is_user_subscribed_to_forum($is_subscribed) {
+function invert_is_user_subscribed_to_forum($is_subscribed, $user_id) {
  if (autosub_is_user_an_exception($user_id)) {
   return $is_subscribed;
  } else {
